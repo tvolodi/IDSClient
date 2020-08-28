@@ -1,0 +1,17 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:win="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:local="using:IDSClient.Shared.View.Styles"
+    xmlns:toolkit="using:Uno.UI.Toolkit"
+	xmlns:xamarin="http://nventive.com/xamarin"
+	xmlns:wasm="http://nventive.com/wasm"
+	xmlns:android="http://nventive.com/android"
+	xmlns:ios="http://nventive.com/ios"
+	mc:Ignorable="ios android xamarin wasm"
+    >
+
+    <x:Double x:Key="CommandBarHeight">48</x:Double>
+    
+</ResourceDictionary>

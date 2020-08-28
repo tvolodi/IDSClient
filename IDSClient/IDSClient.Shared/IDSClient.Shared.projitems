@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6279c845-92f8-4333-ab99-3d213163593c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>IDSClient.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Base\BaseModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Base\GlobalDataTools.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Connectors\HttpRequestService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Connectors\UnoHttpClientHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\BaseUserControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\PageHeader.xaml.cs">
+      <DependentUpon>PageHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Lib\AsyncCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Lib\IAsyncCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mappers\SupplierMapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SupplierListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Converters\FromHeaderModeToValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\SupplierItemView.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Lib\Enums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Lib\OperationArg.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Customer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Good.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Nomenclature.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\NPerson.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\OrderBusket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\OrderBusketItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Supplier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\CustomerViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\CustomerListView.xaml.cs">
+      <DependentUpon>CustomerListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\DashboardView.xaml.cs">
+      <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\SupplierListView.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServiceContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\IStackNavService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\OnNavigatingEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\StackNavigationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\PageHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)View\Styles\AppBarButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)View\Styles\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)View\Styles\CommandBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)View\Styles\StyleList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)View\SupplierItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)View\CustomerListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)View\DashboardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)View\SupplierListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\burgerMenu.scale-100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\burgerMenu.scale-150.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\burgerMenu.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\burgerMenu.scale-300.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\burgerMenu.scale-400.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\SharedAssets.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)NewFolder\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Tools\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModel\" />
+  </ItemGroup>
+</Project>

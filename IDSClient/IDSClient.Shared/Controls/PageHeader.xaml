@@ -1,0 +1,56 @@
+﻿<controls:BaseUserControl
+    x:Class="IDSClient.Shared.Controls.PageHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IDSClient.Shared.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:IDSClient.Shared.Controls"
+    xmlns:cnv="using:IDSClient.Shared.View.Converters"
+    mc:Ignorable="d"
+    d:DesignHeight="115"
+    d:DesignWidth="800"
+    x:Name="HeaderControl"
+    >
+
+    <controls:BaseUserControl.Resources>
+        <cnv:FromHeaderModeToValueConverter x:Key="HeaderModeToHeight"
+											MinimalValue="{StaticResource CommandBarHeight}"
+											LargeValue="115" />
+
+        <cnv:FromHeaderModeToValueConverter x:Key="LargeToVisible"
+											MinimalValue="Collapsed"
+											LargeValue="Visible" />
+
+        <cnv:FromHeaderModeToValueConverter x:Key="MinimalToVisible"
+											MinimalValue="Visible"
+											LargeValue="Collapsed" />
+    </controls:BaseUserControl.Resources>
+
+    <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideVisualState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <CommandBar x:Name="MainCommandBar"
+                    Content="{Binding Title, ElementName=HeaderControl}">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Name="HumburgerButton"
+                              Label="Menu"
+                              Visibility="{Binding HamburgerMenuVisibility, ElementName=HeaderControl}"
+                              Style="{StaticResource HamburgerMenuButtonStyle}"
+                              />
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+
+    </Grid>
+</controls:BaseUserControl>

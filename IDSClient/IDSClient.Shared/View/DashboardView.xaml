@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="IDSClient.Shared.View.DashboardView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IDSClient.Shared.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="OnLoaded"
+    >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            
+            <!-- For main menu button and other buttons -->
+            <RowDefinition Height="55"/> 
+            
+            <!-- For page header -->
+            <RowDefinition Height="25" /> 
+            
+            <!-- For content -->
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+
+        <!-- Toolbar -->
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Grid.Row="0"
+                    >
+            <AppBarButton x:Name="SampleButton" 
+                          Icon="Add" 
+                          Label="Sample" />
+            <AppBarButton x:Name="Sample2Button"
+                          Icon="Save" 
+                          Label="Sample2" />
+            <AppBarButton x:Name="Sample3Button" 
+                          Icon="Delete" 
+                          Label="Sample3" />
+        </StackPanel>
+
+        <TextBlock Text="Dashboard" 
+                   FontSize="18" 
+                   Foreground="RoyalBlue" 
+                   Grid.Row="1"
+                   Margin="30.0,0.0,0.0,0.0"
+                   />
+
+        <TextBox x:Name="DashboardSampleTextBlock" Text="Sample content"
+                   Grid.Row="2"
+                   />
+
+    </Grid>
+</Page>
